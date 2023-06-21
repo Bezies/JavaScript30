@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Key Detection</title>
+  <script type="text/javascript" src="./cornify.js"></script>
+  <link rel="icon" href="https://fav.farm/🔥" />
+</head>
+
+<body>
+  <script>
+    const array = []
+    const secretCode = "bezies"
+    window.addEventListener("keyup", (e) => {
+      array.push(e.key)
+      array.splice(-secretCode - 1, array.length - secretCode.length)
+      console.log(array);
+      if (array.join('') === secretCode) {
+        // alert("YOU WIN")
+        cornify_add()
+      }
+    })
+  </script>
+</body>
+
+</html>
